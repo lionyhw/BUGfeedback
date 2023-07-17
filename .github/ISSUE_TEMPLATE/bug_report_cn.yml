@@ -22,9 +22,16 @@ body:
   validations:
     required: true
 - type: input
-  id: XXX_Verison
+  id: XXX_HdVerison
   attributes:
-    label: 你发现Bug的XXX版本
+    label: 你发现Bug的硬件XXX版本
+    placeholder: vx.x.x
+  validations:
+    required: true
+- type: input
+  id: XXX_SwVerison
+  attributes:
+    label: 你发现Bug的软件XXX版本
     placeholder: vx.x.x
   validations:
     required: true
@@ -39,11 +46,25 @@ body:
   id: BugInMSS3_Retry
   attributes:
     label: 简述Bug触发流程
-    description: 请简要复述如何在XXX中触发这一个Bug
+    description: 如有可能，请提供重现错误的步骤
     placeholder: |
       1. xxx
       2. xxx
       3. xxx
+  validations:
+    required: false
+- type: textarea
+  id: BugInMSS3_1
+  attributes:
+    label: 期望的行为
+    placeholder: 
+  validations:
+    required: true
+- type: textarea
+  id: BugInMSS3_2
+  attributes:
+    label: 实际的行为
+    placeholder: 
   validations:
     required: true
 - type: textarea
@@ -52,7 +73,7 @@ body:
     label: 上传XXX日志
     description: XXX日志文件存储在\XXX, 可以复制到文本框也可以直接上传文件
   validations:
-    required: true
+    required: false
 - type: markdown
   attributes:
-    value: "### 🎉 | 感谢你对XXX的支持!"
+    value: " 🎉 | 感谢支持!"
