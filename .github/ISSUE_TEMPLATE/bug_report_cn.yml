@@ -1,29 +1,24 @@
 name: 🐛 | Bug 提交
-description: 🎤 | 提交你发现的 XXX 中的Bug
+description: 🎤 | 提交你发现的Bug
 title: "[漏洞]: "
 labels: ["漏洞"]
 body:
 - type: markdown
   attributes:
-    value: "# 🎁 | 欢迎你来填写XXX Bug反馈!"
+    value: "# 🎁 | 欢迎你来填写Bug反馈!"
 - type: checkboxes
   id: Prefeedback
   attributes:
     label: 是否确认你所反馈的Bug是独一无二的
-    description: 可以在[这里](https://github.com/XXX/issues?q=is%3Aissue)进行搜索
+    description: 可以在[这里](https://github.com/lionyhw/BUGfeedback/issues?q=is%3Aissue)进行搜索
     options:
       - label: 确认
         required: true
-- type: dropdown
+- type: input
   id: OS_Name
   attributes:
     label: 操作系统
-    description: 你搭建XXX的操作系统
-    multiple: true
-    options:
-      - Windows
-      - Linux
-      - MacOS
+    description: 你所使用的环境
   validations:
     required: true
 - type: input
