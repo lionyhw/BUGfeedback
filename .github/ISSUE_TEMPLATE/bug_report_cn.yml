@@ -1,0 +1,63 @@
+name: 🐛 | Bug 提交
+description: 🎤 | 提交你发现的 XXX 中的Bug
+title: "[漏洞]: "
+labels: ["漏洞"]
+body:
+- type: markdown
+  attributes:
+    value: "# 🎁 | 欢迎你来填写XXX Bug反馈!"
+- type: checkboxes
+  id: Prefeedback
+  attributes:
+    label: 是否确认你所反馈的Bug是独一无二的
+    description: 可以在[这里](https://github.com/XXX/issues?q=is%3Aissue)进行搜索
+    options:
+      - label: 确认
+        required: true
+- type: dropdown
+  id: OS_Name
+  attributes:
+    label: 操作系统
+    description: 你搭建XXX的操作系统
+    multiple: true
+    options:
+      - Windows
+      - Linux
+      - MacOS
+  validations:
+    required: true
+- type: input
+  id: XXX_Verison
+  attributes:
+    label: 你发现Bug的XXX版本
+    placeholder: vx.x.x
+  validations:
+    required: true
+- type: input
+  id: BugInXXX_Place
+  attributes:
+    label: 简述你遇到的Bug
+    description: 请简要描述你在XXX中发现了一个什么Bug
+  validations:
+    required: true
+- type: textarea
+  id: BugInMSS3_Retry
+  attributes:
+    label: 简述Bug触发流程
+    description: 请简要复述如何在XXX中触发这一个Bug
+    placeholder: |
+      1. xxx
+      2. xxx
+      3. xxx
+  validations:
+    required: true
+- type: textarea
+  id: UploadLog
+  attributes:
+    label: 上传XXX日志
+    description: XXX日志文件存储在\XXX, 可以复制到文本框也可以直接上传文件
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: "### 🎉 | 感谢你对XXX的支持!"
